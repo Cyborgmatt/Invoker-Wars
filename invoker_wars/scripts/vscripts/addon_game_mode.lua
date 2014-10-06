@@ -1,3 +1,9 @@
+-- Load Stat collection (statcollection should be available from any script scope)
+require('lib.statcollection')
+statcollection.addStats({
+	modID = '5ee98ff08f6a54e7b59a70c8370c8571' --GET THIS FROM http://getdotastats.com/#d2mods__my_mods
+})
+
 -- Varibles
 MAX_KILLS = 50
 THINK_TIME = 0.1
@@ -49,6 +55,13 @@ function InvokerWars:InitGameMode()
 	ListenToGameEvent('game_rules_state_change', Dynamic_Wrap( InvokerWars, "OnGameRulesStateChange" ), self )
 	ListenToGameEvent('entity_killed', Dynamic_Wrap(InvokerWars, 'OnEntityKilled'), self )
 	ListenToGameEvent('npc_spawned', Dynamic_Wrap(InvokerWars, 'OnNPCSpawned'), self )
+
+    -- Register Console Commands
+    Convars:RegisterCommand('test_endgame', function()
+        GameRules:SetGameWinner(DOTA_TEAM_BADGUYS)
+        GameRules:MakeTeamLose(DOTA_TEAM_GOODGUYS)
+        GameRules:Defeated()
+    end, 'Ends the game.', FCVAR_CHEAT)
 end
 
 -- Pregame welcome message
@@ -87,6 +100,9 @@ end
 function InvokerWars:Think()
   -- If the game's over, it's over.
   if GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME then
+  	-- Send stats
+        statcollection.sendStats()
+        
   	return
   end
 
