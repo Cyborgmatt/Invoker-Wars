@@ -1,3 +1,9 @@
+-- Load Stat collection (statcollection should be available from any script scope)
+require('lib.statcollection')
+statcollection.addStats({
+	modID = '5ee98ff08f6a54e7b59a70c8370c8571' --GET THIS FROM http://getdotastats.com/#d2mods__my_mods
+})
+
 -- Varibles
 MAX_KILLS = 50
 THINK_TIME = 0.1
@@ -87,6 +93,9 @@ end
 function InvokerWars:Think()
   -- If the game's over, it's over.
   if GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME then
+  	-- Send stats
+        statcollection.sendStats()
+        
   	return
   end
 
