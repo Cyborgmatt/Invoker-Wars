@@ -1,8 +1,0 @@
-invoker_wars
-{
-	material materials/overviews/invoker_wars.vmat
-	pos_x -8896
-	pos_y 8192
-	scale 16.000
-	zoom 1.6
-}

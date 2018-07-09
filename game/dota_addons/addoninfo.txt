@@ -1,0 +1,9 @@
+"AddonInfo"
+{
+	"maps"			"invoker_wars"
+    "IsPlayable"	"1"
+	"invoker_wars"
+	{
+		"MaxPlayers"	"10"
+	}
+}
