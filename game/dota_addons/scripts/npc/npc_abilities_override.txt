@@ -1,0 +1,54 @@
+// Dota Abilities Override File
+"DOTAAbilities"
+{
+	"Version"		"1"
+	
+	// TP Scroll
+	"item_tpscroll"
+	{
+		"ItemCost"						"0"
+		"AbilityCooldown"				"20.0"
+	}
+
+	// Necro
+	"item_recipe_necronomicon"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+		"ItemCost"						"1333337"
+	}
+
+	"item_necronomicon"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+	}
+
+	// Dagon
+	"item_recipe_dagon"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+		"ItemCost"						"1333337"
+	}
+
+	"item_dagon"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+	}
+
+	// Euls
+	"item_recipe_cyclone"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+		"ItemCost"						"1333337"
+	}
+
+	"item_cyclone"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+	}
+}
