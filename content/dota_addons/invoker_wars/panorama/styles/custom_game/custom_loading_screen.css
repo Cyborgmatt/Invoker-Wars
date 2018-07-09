@@ -14,9 +14,18 @@
 #TitlePanel
 {
   horizontal-align: left;
-  vertical-align: bottom;
-  margin-bottom: 150px;
-  margin-left: 100px;
+  vertical-align: top;
+  margin-top: 100px;
+  margin-left: 30px;
+  flow-children: right;
+}
+
+#TitlePanel2
+{
+  horizontal-align: left;
+  vertical-align: top;
+  margin-top: 155px;
+  margin-left: 130px;
   flow-children: right;
 }
 
@@ -25,8 +34,20 @@
   margin-bottom: -15px;
   vertical-align: center;
   text-transform: uppercase;
-  font-size: 80px;
-  color: #cccccc;
+  font-size: 65px;
+  font-family: Radiance;
+  color: white;
+  text-shadow: 2px 2px 2px #000000;
+}
+
+#AddonTitle2
+{
+  margin-bottom: -15px;
+  vertical-align: center;
+  text-transform: uppercase;
+  font-size: 65px;
+  font-family: Radiance;
+  color: white;
   text-shadow: 2px 2px 2px #000000;
 }
 
@@ -34,5 +55,6 @@
 {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%;
+  width: 1920px;
+  height: 1080px;
 }

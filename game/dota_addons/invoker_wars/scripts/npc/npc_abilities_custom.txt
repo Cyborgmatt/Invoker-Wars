@@ -13,6 +13,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
 		"BaseClass"						"invoker_sun_strike"
+		"AbilityTextureName"			"invoker_wars_sun_strike"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -61,10 +62,11 @@
 
 	// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"BaseClass"						"invoker_deafening_blast"
-
+		"AbilityTextureName"			"invoker_wars_deafening_blast"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"1000"
@@ -274,6 +276,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"BaseClass"						"invoker_tornado"
+		"AbilityTextureName"			"invoker_wars_tornado"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------

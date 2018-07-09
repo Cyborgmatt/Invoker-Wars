@@ -23,6 +23,9 @@ function InvokerWars:InitGameMode()
     GameMode:SetBuybackEnabled( false )
     -- Override the top bar values to show your own settings instead of total deaths
     GameMode:SetTopBarTeamValuesOverride ( true )
+	-- Force Invoker to Every Player
+	GameMode:SetCustomGameForceHero("npc_dota_hero_invoker")
+	
 
 	-- Setup rules
 	GameRules:SetHeroRespawnEnabled( false )
@@ -72,13 +75,15 @@ end
 
 -- Start players at level 6
 function InvokerWars:OnNPCSpawned( keys )
-	print ( '[InvokerWars] OnNPCSpawned' )
+	print ( '[InvokerWars] OnNPCSpawned in Progress' )
 	local startingLevel = 5
 	local spawnedUnit = EntIndexToHScript( keys.entindex )
 	if not spawnedUnit:IsIllusion() and spawnedUnit:IsHero() then
+	print ( '[InvokerWars] Leveling up players. ' )
 		for i=1,startingLevel do
 			spawnedUnit:HeroLevelUp(false)
 		end
+		print ( '[InvokerWars] All Players Are now Level 6' )
 	end
 end
 
