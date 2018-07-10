@@ -1,7 +1,8 @@
 require("statcollection/init")
+require("libraries/timers")
+require("libraries/notifications")
 
 -- Varibles
-MAX_KILLS = 25
 THINK_TIME = 0.1
 
 if InvokerWars == nil then
@@ -63,16 +64,6 @@ function InvokerWars:OnGameRulesStateChange()
 		print( "[Invoker Wars] Gamemode is running." )
 		ShowGenericPopup( "#invokerwars_instructions_title", "#invokerwars_instructions_body", "", "", DOTA_SHOWGENERICPOPUP_TINT_SCREEN )
 	end
-end
-
--- Show a message to all players
-function InvokerWars:ShowCenterMessage( msg, dur )
-	local msg = {
-	message = msg,
-	duration = dur
-}
-print( "[Invoker Wars] Sending message to all clients." )
-FireGameEvent("show_center_message",msg)
 end
 
 -- Start players at level 6
@@ -246,14 +237,6 @@ function InvokerWars:OnEntityKilled( keys )
   end
   })
 
-	-- Display 10 kills remaining message
-	if self.scoreRadiant == 40 then
-		InvokerWars:ShowCenterMessage("#invokerwars_radiant_10kills",6)
-	end
-	if self.scoreDire == 40 then
-		InvokerWars:ShowCenterMessage("#invokerwars_dire_10kills",6)
-	end
-
 	-- Add on the kill
 	if killedTeam == DOTA_TEAM_BADGUYS then
 		if killerTeam == 2 then
@@ -264,6 +247,16 @@ function InvokerWars:OnEntityKilled( keys )
 				self.scoreDire = self.scoreDire + 1
 			end
 		end
+
+	-- Display 10 kills remaining message
+	if self.scoreRadiant == 20 then
+		print( "[Invoker Wars] Sending message to all clients." )
+		Notifications:TopToAll({text="The Radiant are 5 kills away from Victory!", duration=5.0, style={color="red"}})
+	end
+	if self.scoreDire == 20 then
+		print( "[Invoker Wars] Sending message to all clients." )
+		Notifications:TopToAll({text="The Dire are 5 kills away from Victory!", duration=5.0, style={color="red"}})
+	end
 
 	-- Set the custom score values
 	GameMode:SetTopBarTeamValue ( DOTA_TEAM_BADGUYS, self.scoreDire)

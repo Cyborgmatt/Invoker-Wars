@@ -12,7 +12,7 @@
 		"override_hero"				"npc_dota_hero_invoker"
 		"AbilityLayout"				"6"
 		"Ability1"					"invoker_wars_sun_strike"			// Ability 1
-		"Ability2"					"invoker_wars_cold_snap"			// Ability 2
+		"Ability2"					"deafening_blast_datadriven"		// Ability 2
 		"Ability3"					"invoker_wars_chaos_meteor"			// Ability 3
 		"Ability4"					"invoker_wars_tornado"				// Ability 4
 		"Ability5"					"invoker_wars_ice_wall"				// Ability 5
