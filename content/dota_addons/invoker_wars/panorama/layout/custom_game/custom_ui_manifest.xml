@@ -22,7 +22,8 @@
 		GameUI.CustomUIConfig().team_icons[DOTATeam_t.DOTA_TEAM_GOODGUYS] = "file://{images}/custom_game/team_icons/team_icon_invoker_02.png";
   </script>
   <Panel>
-  <CustomUIElement type="Hud"			layoutfile="file://{resources}/layout/custom_game/overthrow_scoreboard_left.xml" />
-  <CustomUIElement type="Hud"                 layoutfile="file://{resources}/layout/custom_game/statcollection.xml" />
+  <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/overthrow_scoreboard_left.xml" />
+  <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/statcollection.xml" />
+  <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/barebones_notifications.xml" />
   </Panel>
 </root>
