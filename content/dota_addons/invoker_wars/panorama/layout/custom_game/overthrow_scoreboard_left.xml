@@ -1,0 +1,14 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/dotastyles.css" />
+		<include src="file://{resources}/styles/custom_game/overthrow_scoreboard.css" />
+	</styles>
+	<Panel class="ScoreboardLeft">
+		<Panel class="VictoryPanel">
+			<Label id="Goal" text="Goal" />
+			<Label id="VictoryPoints" text="50" />
+			<Label id="Timer" text="Kills" />
+		</Panel>
+	</Panel>
+</root>
+

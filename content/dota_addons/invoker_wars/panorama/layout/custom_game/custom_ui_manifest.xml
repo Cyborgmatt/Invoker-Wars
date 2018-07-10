@@ -11,5 +11,6 @@
 		GameUI.CustomUIConfig().dotaUi = newUI;
   </script>
   <Panel>
+  <CustomUIElement type="Hud"			layoutfile="file://{resources}/layout/custom_game/overthrow_scoreboard_left.xml" />
   </Panel>
 </root>

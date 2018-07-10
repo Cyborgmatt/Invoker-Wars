@@ -55,74 +55,63 @@
 	}
 
 	//=================================================================================================================
-	// Invoker Wars: Deafening Blast
+	// Invoker Wars: Cold Snap
 	//=================================================================================================================
-	"invoker_wars_deafening_blast"
+	"invoker_wars_cold_snap"
 	{
-
-	// General
+		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-		"BaseClass"						"invoker_deafening_blast"
-		"AbilityTextureName"			"invoker_wars_deafening_blast"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"BaseClass"						"invoker_cold_snap"												
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"MaxLevel"						"4"
 		
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"1000"
-		"AbilityCastPoint"				"0"
 		"AbilityCooldown"				"10"
 		"AbilityManaCost"				"0"
-		"AbilityModifierSupportValue"	"0.5"	// Applies 2 modifiers
-
-
+		"AbilityModifierSupportValue"	"0.15"	// Applies multiple modifiers
+		
+		// Unit Targeting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+			
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
 		{
 			"01"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"travel_distance"		"1000"
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"3.0 3.5 4.0 4.5"
 			}
 			"02"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"travel_speed"			"1100"
+				"var_type"				"FIELD_FLOAT"
+				"freeze_duration"		"0.4"
 			}
 			"03"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"radius_start"			"175"
+				"var_type"				"FIELD_FLOAT"
+				"freeze_cooldown"		"0.77 0.74 0.71 0.69"
 			}
 			"04"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"radius_end"			"225"
+				"var_type"				"FIELD_FLOAT"
+				"freeze_damage"			"21 35 49 56"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"end_vision_duration"	"1.75"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"damage"				"50 80 120 160"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"knockback_duration"	"0.25 0.5 0.75 1.0"
-			}
-			"08"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"disarm_duration"		"1.0 1.5 2.0 2.5"
+				"damage_trigger"		"10.0"
 			}
 		}
 	}
 
+	
 	//=================================================================================================================
 	// Invoker Wars: Meat Ball
 	//=================================================================================================================
