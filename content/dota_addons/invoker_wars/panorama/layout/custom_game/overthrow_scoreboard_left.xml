@@ -6,7 +6,7 @@
 	<Panel class="ScoreboardLeft">
 		<Panel class="VictoryPanel">
 			<Label id="Goal" text="Goal" />
-			<Label id="VictoryPoints" text="50" />
+			<Label id="VictoryPoints" text="25" />
 			<Label id="Timer" text="Kills" />
 		</Panel>
 	</Panel>

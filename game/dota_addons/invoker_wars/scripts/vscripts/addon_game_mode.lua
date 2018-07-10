@@ -1,5 +1,7 @@
+require("statcollection/init")
+
 -- Varibles
-MAX_KILLS = 50
+MAX_KILLS = 25
 THINK_TIME = 0.1
 
 if InvokerWars == nil then
@@ -43,7 +45,7 @@ function InvokerWars:InitGameMode()
 	--Score
 	self.scoreDire = 0
 	self.scoreRadiant = 0
-	self.kills_to_win = 50
+	self.kills_to_win = 25
 
 	-- Register Think
 	GameMode:SetContextThink("InvokerWarsThink", Dynamic_Wrap( InvokerWars, 'Think' ), THINK_TIME )

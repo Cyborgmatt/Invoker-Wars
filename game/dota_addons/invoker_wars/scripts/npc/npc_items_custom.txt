@@ -1,0 +1,167 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Rod of Atos
+	//=================================================================================================================
+	"item_rod_of_atos"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"206"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"FightRecapLevel"				"1"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16"
+		"AbilityCastRange"				"1150"
+		"AbilityCastPoint"				"0.0"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50"
+		"ItemCost"						"2930"
+		"ItemShopTags"					"int;regen_health"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"rod of atos"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{		
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"		"20"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"15"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"6"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"1.0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_range"			"1150"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Recipe: Sheepstick
+	//=================================================================================================================
+	"item_recipe_sheepstick"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"95"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_sheepstick"
+		"ItemRequirements"
+		{
+			"01"						"item_mystic_staff;item_ultimate_orb"
+		}
+	}
+	
+	//=================================================================================================================
+	// Sheepstick
+	//=================================================================================================================
+	"item_sheepstick"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"96"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"FightRecapLevel"				"2"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.0"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"22.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+		"ItemCost"						"4850"
+		"ItemShopTags"					"int;regen_mana;agi;hard_to_tag"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"hex;sheepstick;scythe of vyse"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"10"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"10"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"		"35"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"		"2.25"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"sheep_duration"		"1.5"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"sheep_movement_speed"	"140"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_range"			"800"
+			}
+		}
+	}
+	
+}
+	
