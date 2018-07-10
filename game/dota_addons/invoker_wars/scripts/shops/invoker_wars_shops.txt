@@ -82,7 +82,7 @@
 		"item"		"item_oblivion_staff"
 		"item"		"item_pers"
 		"item"		"item_hand_of_midas"
-		"item"		"item_travel_boots"				
+		"item"		"item_abyssal_blade"			
 	}
 
 	// Level 2 - Blue Recipes
@@ -99,7 +99,6 @@
 		"item"		"item_ancient_janggo"
 		"item"		"item_vladmir"	
 		"item"		"item_mekansm"					
-		"item"		"item_pipe"			
 	}
 				
 	"magics"			
@@ -111,6 +110,11 @@
 		"item"		"item_orchid"	
 		"item"		"item_refresher"
 		"item"		"item_sheepstick"
+		"item"		"item_satanic"
+		"item"		"item_pipe"	
+		"item"		"item_travel_boots"
+		"item"		"item_travel_boots_2"
+				
 	}
 		
 	// Level 3 - Purple Recipes	
@@ -142,7 +146,6 @@
 		"item"		"item_greater_crit"
 		"item"		"item_butterfly"
 		"item"		"item_rapier"
-		"item"		"item_abyssal_blade"	
 					
 					
 	}
@@ -160,8 +163,7 @@
  		"item"		"item_heavens_halberd"
  		"item"		"item_sange_and_yasha"
  		"item"		"item_mjollnir"
- 		"item"		"item_skadi" 
- 		"item"		"item_satanic"		
+ 		"item"		"item_skadi" 		
 	}
 
 	"sideshop1"

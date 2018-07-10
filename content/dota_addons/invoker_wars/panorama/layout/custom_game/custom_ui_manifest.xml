@@ -1,0 +1,15 @@
+<root>
+  <scripts>
+  </scripts>
+  <script>
+		var newUI = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("lower_hud").FindChildTraverse("center_with_stats").FindChildTraverse("center_block");
+		newUI.FindChildTraverse("StatBranch").style.visibility = "collapse";
+		newUI.FindChildTraverse("level_stats_frame").style.visibility = "collapse";
+		newUI.FindChildTraverse("LevelUpBurstFX").style.visibility = "collapse";
+		newUI.FindChildTraverse("LevelUpTab").style.visibility = "collapse";
+		newUI.FindChildTraverse("LevelUpGlow").style.visibility = "collapse";
+		GameUI.CustomUIConfig().dotaUi = newUI;
+  </script>
+  <Panel>
+  </Panel>
+</root>

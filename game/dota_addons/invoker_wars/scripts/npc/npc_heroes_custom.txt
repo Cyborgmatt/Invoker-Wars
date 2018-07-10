@@ -9,14 +9,20 @@
 	"npc_dota_hero_invoker_wars"
 	{
 		"override_hero"				"npc_dota_hero_invoker"
-		"AbilityLayout"				"6"
 		"Ability1"					"invoker_wars_sun_strike"			// Ability 1
 		"Ability2"					"invoker_wars_deafening_blast"		// Ability 2
 		"Ability3"					"invoker_wars_chaos_meteor"			// Ability 3
 		"Ability4"					"invoker_wars_tornado"				// Ability 4
 		"Ability5"					"invoker_wars_ice_wall"				// Ability 5
-		"Ability6"					"invoker_wars_leap"					// Ability 6 - Extra.
-		"Ability7"					"attribute_bonus"					// Ability 7 - Extra.
+		"Ability6"					"invoker_wars_leap"					// Ability 6
+		"Ability17"					""									// Talent
+		"Ability18"					""									// Talent
+		"Ability19"					""									// Talent
+		"Ability20"					""									// Talent
+		"Ability21"					""									// Talent
+		"Ability22"					""									// Talent
+		"Ability23"					""									// Talent
+		"Ability24"					""									// Talent
 		"VisionNighttimeRange"		"2000"								// Range of vision at night time.
 	}
 }
