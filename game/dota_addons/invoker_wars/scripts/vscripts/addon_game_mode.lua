@@ -45,6 +45,7 @@ function InvokerWars:InitGameMode()
 	self.m_TeamColors[DOTA_TEAM_CUSTOM_2] = { 255, 35, 25 }		--		Red
 	-- Color for Radiant players
 	local radiantColor = { 2, 152, 0 } -- Green
+	SetTeamCustomHealthbarColor( DOTA_TEAM_GOODGUYS, radiantColor[1], radiantColor[2], radiantColor[3] )
 	-- Color for Dire players
 	local direColor = { 255, 35, 25 } -- Red
 	SetTeamCustomHealthbarColor( DOTA_TEAM_BADGUYS, direColor[1], direColor[2], direColor[3] )
