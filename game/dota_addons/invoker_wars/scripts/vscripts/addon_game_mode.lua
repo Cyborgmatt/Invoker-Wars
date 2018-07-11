@@ -38,7 +38,18 @@ function InvokerWars:InitGameMode()
 	GameRules:SetPreGameTime( 30.0)
 	GameRules:SetPostGameTime( 30.0 )
 	print( "[Invoker Wars] Gamemode rules are set." )
-
+	
+	-- Color for Teams
+	self.m_TeamColors = {}
+	self.m_TeamColors[DOTA_TEAM_CUSTOM_1] = { 2, 152, 0 }		--		Green
+	self.m_TeamColors[DOTA_TEAM_CUSTOM_2] = { 255, 35, 25 }		--		Red
+	-- Color for Radiant players
+	local radiantColor = { 2, 152, 0 } -- Green
+	-- Color for Dire players
+	local direColor = { 255, 35, 25 } -- Red
+	SetTeamCustomHealthbarColor( DOTA_TEAM_BADGUYS, direColor[1], direColor[2], direColor[3] )
+	print( "[Invoker Wars] Team & Player Colors are set." )	
+	
 	-- Init self
 	InvokerWars = self
 	-- Timers
