@@ -37,7 +37,11 @@ function InvokerWars:InitGameMode()
 	GameRules:SetHeroSelectionTime( 15.0 )
 	GameRules:SetPreGameTime( 30.0)
 	GameRules:SetPostGameTime( 30.0 )
+	GameRules:GetGameModeEntity():SetFountainPercentageHealthRegen( 0 )
+	GameRules:GetGameModeEntity():SetFountainPercentageManaRegen( 0 )
+	GameRules:GetGameModeEntity():SetFountainConstantManaRegen( 0 )
 	print( "[Invoker Wars] Gamemode rules are set." )
+	
 	
 	-- Color for Teams
 	self.m_TeamColors = {}
@@ -50,6 +54,9 @@ function InvokerWars:InitGameMode()
 	local direColor = { 255, 35, 25 } -- Red
 	SetTeamCustomHealthbarColor( DOTA_TEAM_BADGUYS, direColor[1], direColor[2], direColor[3] )
 	print( "[Invoker Wars] Team & Player Colors are set." )	
+	
+	InvokerWars:SetUpFountainRegen()
+	
 	
 	-- Init self
 	InvokerWars = self
@@ -199,6 +206,18 @@ function InvokerWars:RemoveTimer(name)
   self.timers[name] = nil
 end
 
+-- Setting up fountain regen
+function InvokerWars:SetUpFountainRegen()
+
+	LinkLuaModifier( "modifier_fountain_aura_lua", LUA_MODIFIER_MOTION_NONE )
+	LinkLuaModifier( "modifier_fountain_aura_effect_lua", LUA_MODIFIER_MOTION_NONE )
+
+	local fountainEntities = Entities:FindAllByClassname( "ent_dota_fountain")
+	for _,fountainEnt in pairs( fountainEntities ) do
+		fountainEnt:AddNewModifier( fountainEnt, fountainEnt, "modifier_fountain_aura_lua", {} )
+	end
+end
+
 function InvokerWars:RemoveTimers(killAll)
 	local timers = {}
 
@@ -263,11 +282,16 @@ function InvokerWars:OnEntityKilled( keys )
 	-- Display 10 kills remaining message
 	if self.scoreRadiant == 20 then
 		print( "[Invoker Wars] Sending message to all clients." )
-		Notifications:TopToAll({text="The Radiant are 5 kills away from Victory!", duration=5.0, style={color="red"}})
+		Notifications:TopToAll({text="<b color='green'>The Radiant</b> <b color='white'>are 5 kills away from Victory!</b> ", duration=5.0})
+	else 
+		print( "[Invoker Wars] Notification Couldn't Sent Because Radiant's Score is not 20." )
 	end
+	
 	if self.scoreDire == 20 then
 		print( "[Invoker Wars] Sending message to all clients." )
-		Notifications:TopToAll({text="The Dire are 5 kills away from Victory!", duration=5.0, style={color="red"}})
+		Notifications:TopToAll({text="<b color='red'>The Dire</b> <b color='white'>are 5 kills away from Victory!</b> ", duration=5.0})
+	else
+		print( "[Invoker Wars] Notification Couldn't Sent Because Dire's Score is not 20." )
 	end
 
 	-- Set the custom score values
