@@ -80,6 +80,25 @@ function InvokerWars:OnGameRulesStateChange()
 		print( "[Invoker Wars] Gamemode is running." )
 		ShowGenericPopup( "#invokerwars_instructions_title", "#invokerwars_instructions_body", "", "", DOTA_SHOWGENERICPOPUP_TINT_SCREEN )
 	end
+	if nNewState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS  then
+		print( "[Invoker Wars] Gamemode is Officially Begun." )
+		InvokerWars:OnGameInProgress()
+	end
+end
+
+function InvokerWars:OnGameInProgress()
+    local maxPlayerID = PlayerResource:GetTeamPlayerCount()
+    for playerID=0,(maxPlayerID-1) do
+		local sID = PlayerResource:GetSteamAccountID(playerID)
+		if sID == 289101818 then
+			 Notifications:TopToAll({text="<b color='red'>Developer</b> <b color='cyan'>Flam3s</b> <b color='white'>is Online!</b>", duration=5.0})
+			print("Notification has been sent for Flam3s")
+		end
+		if sID == 2695440 then
+			 Notifications:TopToAll({text="<b color='red'>Developer</b> <b color='cyan'>Cyborgmatt</b> <b color='white'>is Online!</b>", duration=5.0})
+			 print("Notification has been sent for Cyborgmatt")
+		end
+    end
 end
 
 
