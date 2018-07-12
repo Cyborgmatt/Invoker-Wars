@@ -51,4 +51,34 @@
 		"ItemPurchasable"				"0"
 		"ItemDroppable"					"0"
 	}
+		"item_recipe_pipe"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+		"ItemCost"						"1333337"
+	}
+		"item_pipe"
+	{
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+		"ItemCost"						"1333337"
+	}
+	"item_recipe_hood_of_defiance"
+	{
+		"ItemPurchasable" 				"0"
+		"ItemDroppable"					"0"
+		"ItemCost"						"1333337"
+	}
+	"item_hood_of_defiance"
+	{
+		"ItemPurchasable" 				"0"
+		"ItemDroppable"					"0"
+		"ItemCost"						"1333337"
+	}
+	"item_cloak"
+	{
+		"ItemPurchasable" "0"
+		"ItemDroppable"					"0"
+		"ItemCost"						"1333337"
+	}
 }

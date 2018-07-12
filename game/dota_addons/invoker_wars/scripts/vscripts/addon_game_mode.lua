@@ -29,7 +29,6 @@ function InvokerWars:InitGameMode()
 	-- Force Invoker to Every Player
 	GameMode:SetCustomGameForceHero("npc_dota_hero_invoker")
 	
-
 	-- Setup rules
 	GameRules:SetHeroRespawnEnabled( false )
 	GameRules:SetUseUniversalShopMode( true )
@@ -42,7 +41,6 @@ function InvokerWars:InitGameMode()
 	GameRules:GetGameModeEntity():SetFountainConstantManaRegen( 0 )
 	print( "[Invoker Wars] Gamemode rules are set." )
 	
-	
 	-- Color for Teams
 	self.m_TeamColors = {}
 	self.m_TeamColors[DOTA_TEAM_CUSTOM_1] = { 2, 152, 0 }		--		Green
@@ -54,9 +52,8 @@ function InvokerWars:InitGameMode()
 	local direColor = { 255, 35, 25 } -- Red
 	SetTeamCustomHealthbarColor( DOTA_TEAM_BADGUYS, direColor[1], direColor[2], direColor[3] )
 	print( "[Invoker Wars] Team & Player Colors are set." )	
-	
+
 	InvokerWars:SetUpFountainRegen()
-	
 	
 	-- Init self
 	InvokerWars = self
@@ -85,13 +82,14 @@ function InvokerWars:OnGameRulesStateChange()
 	end
 end
 
+
 -- Start players at level 6
 function InvokerWars:OnNPCSpawned( keys )
 	print ( '[InvokerWars] OnNPCSpawned in Progress' )
 	local startingLevel = 5
 	local spawnedUnit = EntIndexToHScript( keys.entindex )
 	if not spawnedUnit:IsIllusion() and spawnedUnit:IsHero() then
-	print ( '[InvokerWars] Leveling up players. ' )
+		print ( '[InvokerWars] Leveling up players. ' )
 		for i=1,startingLevel do
 			spawnedUnit:HeroLevelUp(false)
 		end
