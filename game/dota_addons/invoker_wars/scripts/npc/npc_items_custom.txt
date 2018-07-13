@@ -187,7 +187,6 @@
 		}
 	}
 	
-	
 	//=================================================================================================================
 	// Glimmer Cape
 	//=================================================================================================================
@@ -210,7 +209,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1865"
+		"ItemCost"						"1950"
 		"ItemShopTags"					""
 		"ItemQuality"					"rare"
 		"ItemAliases"					"glimmer cape"
@@ -227,28 +226,53 @@
 			}
 			"02"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"fade_delay"				"0.6"
+				"var_type"				"FIELD_INTEGER"
+				"bonus_magical_armor"	""
 			}
 			"03"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"active_magical_armor"	"45"
+				"var_type"				"FIELD_FLOAT"
+				"fade_delay"				"0.6"
 			}
 			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"active_magical_armor"	"0"
+			}
+			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
 				"duration"	"5"
 			}
-			"05"
+			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"tooltip_range"			"800"
 			}
-			"06"
+			"07"
 			{
 				"var_type"				"FIELD_FLOAT"
 				"building_duration_limit"			"180"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"building_duration_limit"			"180"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"5"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"10"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"		"5"
 			}
 		}
 	}

@@ -114,14 +114,14 @@ function GameMode:OnGameInProgress()
  local maxPlayerID = PlayerResource:GetTeamPlayerCount()
     for playerID=0,(maxPlayerID-1) do
 		local sID = PlayerResource:GetSteamAccountID(playerID)
-		if sID == 289101818 or sID == 2695440 then
+		if sID == 289101818 or sID == 5390881 then
 			local player = PlayerResource:GetPlayer(playerID)
 			local hero = player:GetAssignedHero()
 			local particleName = "particles/econ/events/ti8/ti8_hero_effect.vpcf"
 			local particle = ParticleManager:CreateParticle( particleName, PATTACH_ABSORIGIN_FOLLOW, hero)
 			ParticleManager:SetParticleControl(particle, 0, hero:GetOrigin())
 			ParticleManager:SetParticleControl(particle, 3, hero:GetOrigin())
-			print("everything has been set")
+			print("[InvokerWars] Particles updated")
 		end
     end
 end
@@ -132,29 +132,28 @@ end
 -- It can be used to pre-initialize any values/tables that will be needed later
 function GameMode:InitGameMode()
   GameMode = self
-  print( "[Invoker Wars] Gamemode is initialising." )
-	
-	local radiantColor = { 52, 152, 219 }     -- Cyan
-	SetTeamCustomHealthbarColor( DOTA_TEAM_GOODGUYS, radiantColor[1], radiantColor[2], radiantColor[3] )
-	local direColor = { 234, 130, 5 }      -- Orange
-	SetTeamCustomHealthbarColor( DOTA_TEAM_BADGUYS, direColor[1], direColor[2], direColor[3] )
-	local custom1Color = { 190, 73, 213 }  -- Purple
-	SetTeamCustomHealthbarColor( DOTA_TEAM_CUSTOM_1, custom1Color[1], custom1Color[2], custom1Color[3] )
-
-	GameMode:SetUpFountainRegen()
+  print( "[InvokerWars] Gamemode is initialising." )
+  
+  self.m_VictoryMessages = {}
+  self.m_VictoryMessages[DOTA_TEAM_GOODGUYS] = "#VictoryMessage_GoodGuys"
+  self.m_VictoryMessages[DOTA_TEAM_BADGUYS]  = "#VictoryMessage_BadGuys"
+  self.m_VictoryMessages[DOTA_TEAM_CUSTOM_1] = "#VictoryMessage_Custom1"
 end
 
-function GameMode:SetUpFountainRegen()
+-- Handle votes
+function GameMode:OnSettingVote(keys)
+	print("Custom Game Settings Vote.")
+	PrintTable(keys)
 
-	LinkLuaModifier( "modifier_fountain_aura_lua", LUA_MODIFIER_MOTION_NONE )
-	LinkLuaModifier( "modifier_fountain_aura_effect_lua", LUA_MODIFIER_MOTION_NONE )
+	local pid 	= keys.PlayerID
+	local mode 	= GameRules.GameMode
 
-	local fountainEntities = Entities:FindAllByClassname( "ent_dota_fountain")
-	for _,fountainEnt in pairs( fountainEntities ) do
-		fountainEnt:AddNewModifier( fountainEnt, fountainEnt, "modifier_fountain_aura_lua", {} )
-	end
+	-- VoteTable is initialised in InitGameMode()
+	if not mode.VoteTable[keys.category] then mode.VoteTable[keys.category] = {} end
+	mode.VoteTable[keys.category][pid] = keys.vote
+
+	PrintTable(mode.VoteTable)
 end
-
 
 -- This is an example console command
 function GameMode:ExampleConsoleCommand()

@@ -17,6 +17,57 @@ function GameMode:OnGameRulesStateChange(keys)
   DebugPrintTable(keys)
 
   local newState = GameRules:State_Get()
+
+  if newState == DOTA_GAMERULES_STATE_HERO_SELECTION then
+    local mode 	= GameRules.GameMode
+		local votes = mode.VoteTable
+
+		for category, pidVoteTable in pairs(votes) do
+			
+			-- Tally the votes into a new table
+			local voteCounts = {}
+			for pid, vote in pairs(pidVoteTable) do
+				if not voteCounts[vote] then voteCounts[vote] = 0 end
+				voteCounts[vote] = voteCounts[vote] + 1
+			end
+
+			--print(" ----- " .. category .. " ----- ")
+			--PrintTable(voteCounts)
+
+			-- Find the key that has the highest value (key=vote value, value=number of votes)
+			local highest_vote = 0
+			local highest_key = ""
+			for k, v in pairs(voteCounts) do
+				if v > highest_vote then
+					highest_key = k
+					highest_vote = v
+				end
+			end
+
+			-- Check for a tie by counting how many values have the highest number of votes
+			local tieTable = {}
+			for k, v in pairs(voteCounts) do
+				if v == highest_vote then
+					table.insert(tieTable, k)
+				end
+			end
+
+			-- Resolve a tie by selecting a random value from those with the highest votes
+			if table.getn(tieTable) > 1 then
+				--print("TIE!")
+				highest_key = tieTable[math.random(table.getn(tieTable))]
+			end
+
+			-- Act on the winning vote
+			if category == "kill_limit" then
+				KILLS_TO_END_GAME_FOR_TEAM = highest_key
+			end
+
+			print(category .. ": " .. highest_key)
+		end
+
+    CustomNetTables:SetTableValue( "game_state", "victory_condition", { kills_to_win = KILLS_TO_END_GAME_FOR_TEAM } );
+  end
 end
 
 -- An NPC has spawned somewhere in game.  This includes heroes

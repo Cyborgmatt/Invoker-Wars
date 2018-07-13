@@ -68,6 +68,7 @@ function GameMode:_OnEntityKilled( keys )
     if END_GAME_ON_KILLS and GetTeamHeroKills(killerEntity:GetTeam()) >= KILLS_TO_END_GAME_FOR_TEAM then
       GameRules:SetSafeToLeave( true )
       GameRules:SetGameWinner( killerEntity:GetTeam() )
+      GameRules:SetCustomVictoryMessage( GameRules.GameMode.m_VictoryMessages[killerEntity:GetTeam()] )
     end
 
     --PlayerResource:GetTeamKills
