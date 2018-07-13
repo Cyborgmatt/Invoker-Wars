@@ -47,31 +47,10 @@ MAX_LEVEL = 23                           -- What level should we let heroes get 
 USE_CUSTOM_XP_VALUES = true             -- Should we use custom XP values to level up heroes, or the default Dota numbers?
 
 -- Fill this table up with the required XP per level if you want to change it
-XP_PER_LEVEL_TABLE = {
-	0, -- 1
-	100, -- 2
-	400, -- 3
-	700, -- 4
-	1000, -- 5
-	1300, -- 6
-	1600, -- 7
-	1900, -- 8
-	2200, -- 9
-	2500, -- 10
-	2800, -- 11
-	3100,  -- 12
-	3400,  -- 13
-	3700,  -- 14
-	4000,  -- 15
-	4400,  -- 16
-	4800,  -- 17
-	5200,  -- 18
-	5700,  -- 19
-	6200,  -- 20
-	6700,  -- 21
-	7500,  -- 22
-	8000  -- 23
-}
+XP_PER_LEVEL_TABLE = {}
+for i=1,MAX_LEVEL do
+  XP_PER_LEVEL_TABLE[i] = (i-1) * 100
+end
 
 ENABLE_FIRST_BLOOD = true               -- Should we enable first blood for the first kill in this game?
 HIDE_KILL_BANNERS = false               -- Should we hide the kill banners that show when a player is killed?
@@ -162,8 +141,8 @@ USE_CUSTOM_TEAM_COLORS_FOR_PLAYERS = true          -- Should we use custom team 
 
 TEAM_COLORS = {}                        -- If USE_CUSTOM_TEAM_COLORS is set, use these colors.
 TEAM_COLORS[DOTA_TEAM_GOODGUYS] = { 52, 152, 219 }  --    Cyan
-TEAM_COLORS[DOTA_TEAM_BADGUYS]  = { 234, 130, 5 }   --    Orange
-TEAM_COLORS[DOTA_TEAM_CUSTOM_1] = { 190, 73, 213 }  --    Purple
+TEAM_COLORS[DOTA_TEAM_BADGUYS]  = { 190, 73, 213 }  --    Purple
+TEAM_COLORS[DOTA_TEAM_CUSTOM_1] = { 234, 130, 5 }   --    Orange
 TEAM_COLORS[DOTA_TEAM_CUSTOM_2] = { 22, 181, 46 }   --    Green
 TEAM_COLORS[DOTA_TEAM_CUSTOM_3] = { 52, 85, 255 }   --    Blue
 TEAM_COLORS[DOTA_TEAM_CUSTOM_4] = { 101, 212, 19 }  --    Green
