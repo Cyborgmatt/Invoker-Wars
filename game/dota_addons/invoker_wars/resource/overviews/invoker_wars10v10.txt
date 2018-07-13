@@ -1,0 +1,8 @@
+invoker_wars10v10
+{
+	material materials/overviews/invoker_wars10v10.vmat
+	pos_x -5952
+	pos_y 5248
+	scale 10.250
+}
+

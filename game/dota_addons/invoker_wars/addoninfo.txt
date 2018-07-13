@@ -1,9 +1,17 @@
 "AddonInfo"
 {
-	"maps"			"invoker_wars"
+	"maps"			"invoker_wars invoker_wars10v10 invoker_wars6v6v6"
     "IsPlayable"	"1"
 	"invoker_wars"
 	{
 		"MaxPlayers"	"10"
+	}
+	"invoker_wars10v10"
+	{
+		"MaxPlayers"	"20"
+	}
+	"invoker_wars6v6v6"
+	{
+		"MaxPlayers"	"18"
 	}
 }

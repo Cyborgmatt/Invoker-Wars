@@ -163,5 +163,95 @@
 		}
 	}
 	
+	//=================================================================================================================
+	// Recipe: Glimmer Cape
+	//=================================================================================================================
+	"item_recipe_glimmer_cape"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"253"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_glimmer_cape"
+		"ItemRequirements"
+		{
+			"01"						"item_shadow_amulet;item_wraith_band"
+		}
+	}
+	
+	
+	//=================================================================================================================
+	// Glimmer Cape
+	//=================================================================================================================
+	"item_glimmer_cape"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"254"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"FightRecapLevel"				"1"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+		"AbilityCooldown"				"14.0"
+		"AbilityManaCost"				"90"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1865"
+		"ItemShopTags"					""
+		"ItemQuality"					"rare"
+		"ItemAliases"					"glimmer cape"
+		"ShouldBeSuggested"				"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{			
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"20"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"fade_delay"				"0.6"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"active_magical_armor"	"45"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"	"5"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_range"			"800"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"building_duration_limit"			"180"
+			}
+		}
+	}
+	
 }
 	
