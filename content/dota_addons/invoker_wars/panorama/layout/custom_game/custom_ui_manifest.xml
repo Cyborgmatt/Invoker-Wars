@@ -15,8 +15,8 @@
   
 		GameUI.CustomUIConfig().team_colors = {}
 		GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_GOODGUYS] = "#3498db;"; // { 52, 152, 219 } --	Cyan 
-		GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_BADGUYS ] = "#EA8205;"; // { 234, 130, 5 }  --	Orange
-		GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_CUSTOM_1] = "#BE49D5;"; // { 190, 73, 213 } --	Purple
+		GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_BADGUYS ] = "#BE49D5;"; // { 190, 73, 213 } --	Purple
+		GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_CUSTOM_1] = "#EA8205;"; // { 234, 130, 5 }  --	Orange
 		
 		GameUI.CustomUIConfig().team_icons = {}
 		GameUI.CustomUIConfig().team_icons[DOTATeam_t.DOTA_TEAM_BADGUYS ] = "file://{images}/custom_game/team_icons/team_icon_invoker_01.png";
