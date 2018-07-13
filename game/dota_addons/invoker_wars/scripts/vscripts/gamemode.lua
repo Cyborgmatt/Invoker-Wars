@@ -98,7 +98,7 @@ function GameMode:OnHeroInGame(hero)
   if not hero:IsIllusion() and hero:IsHero() then
     local level = hero:GetLevel()
       while level < 6 do
-        hero:AddExperience (500,0,false,false)
+        hero:AddExperience (200,0,false,false)
         level = hero:GetLevel()
       end
     end
