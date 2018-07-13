@@ -90,7 +90,7 @@ function InvokerWars:OnGameInProgress()
 			local player = PlayerResource:GetPlayer(playerID)
 			local hero = player:GetAssignedHero()
 			local particleName = "particles/econ/events/ti8/ti8_hero_effect.vpcf"
-			local particle = ParticleManager:CreateParticleForPlayer( particleName, PATTACH_ABSORIGIN_FOLLOW, hero, player )
+			local particle = ParticleManager:CreateParticle( particleName, PATTACH_ABSORIGIN_FOLLOW, hero)
 			ParticleManager:SetParticleControl(particle, 0, hero:GetOrigin())
 			ParticleManager:SetParticleControl(particle, 3, hero:GetOrigin())
 			print("everything has been set")
