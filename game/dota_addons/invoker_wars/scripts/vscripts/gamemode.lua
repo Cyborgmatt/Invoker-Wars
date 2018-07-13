@@ -94,15 +94,14 @@ end
   The hero parameter is the hero entity that just spawned in
 ]]
 function GameMode:OnHeroInGame(hero)
-	print ( '[InvokerWars] OnNPCSpawned in Progress' )
-	local startingLevel = 5
-	if not hero:IsIllusion() and hero:IsHero() then
-		print ( '[InvokerWars] Leveling up players. ' )
-		for i=1,startingLevel do
-			hero:HeroLevelUp(false)
-		end
-		print ( '[InvokerWars] All Players Are now Level 6' )
-	end
+  print ('[InvokerWars] OnHeroInGame')
+  if not hero:IsIllusion() and hero:IsHero() then
+    local level = hero:GetLevel()
+      while level < 6 do
+        hero:AddExperience (1300,0,false,false)
+        level = hero:GetLevel()
+      end
+    end
 end
 
 --[[

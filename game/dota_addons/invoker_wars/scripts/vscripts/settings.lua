@@ -42,15 +42,36 @@ DISABLE_GOLD_SOUNDS = false             -- Should we disable the gold sound when
 END_GAME_ON_KILLS = true                -- Should the game end after a certain number of kills?
 KILLS_TO_END_GAME_FOR_TEAM = 25         -- How many kills for a team should signify an end of game?
 
-USE_CUSTOM_HERO_LEVELS = false           -- Should we allow heroes to have custom levels?
-MAX_LEVEL = 50                           -- What level should we let heroes get to?
-USE_CUSTOM_XP_VALUES = false             -- Should we use custom XP values to level up heroes, or the default Dota numbers?
+USE_CUSTOM_HERO_LEVELS = true           -- Should we allow heroes to have custom levels?
+MAX_LEVEL = 23                           -- What level should we let heroes get to?
+USE_CUSTOM_XP_VALUES = true             -- Should we use custom XP values to level up heroes, or the default Dota numbers?
 
 -- Fill this table up with the required XP per level if you want to change it
-XP_PER_LEVEL_TABLE = {}
-for i=1,MAX_LEVEL do
-  XP_PER_LEVEL_TABLE[i] = (i-1) * 100
-end
+XP_PER_LEVEL_TABLE = {
+	0, -- 1
+	100, -- 2
+	400, -- 3
+	700, -- 4
+	1000, -- 5
+	1300, -- 6
+	1600, -- 7
+	1900, -- 8
+	2200, -- 9
+	2500, -- 10
+	2800, -- 11
+	3100,  -- 12
+	3400,  -- 13
+	3700,  -- 14
+	4000,  -- 15
+	4400,  -- 16
+	4800,  -- 17
+	5200,  -- 18
+	5700,  -- 19
+	6200,  -- 20
+	6700,  -- 21
+	7500,  -- 22
+	8000  -- 23
+}
 
 ENABLE_FIRST_BLOOD = true               -- Should we enable first blood for the first kill in this game?
 HIDE_KILL_BANNERS = false               -- Should we hide the kill banners that show when a player is killed?
