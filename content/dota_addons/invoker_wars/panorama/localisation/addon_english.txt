@@ -1,0 +1,91 @@
+﻿"lang"
+{
+	"Language"		"English"
+	"Tokens"
+	{		
+		"addon_game_name"							"Invoker Wars"
+		"game_mode_15_desc"							"You're a bloody wizard 'Arry."
+		"DOTA_GoodGuys"								"Quas"
+		"DOTA_BadGuys"								"Wex"
+		"DOTA_CUSTOM1"								"Exort"
+		"DOTA_CUSTOM2"								"Exort"
+		"DOTA_Winner_GoodGuys"						"Radiant Victory"
+		"DOTA_Winner_BadGuys"						"Dire Victory"
+		"DOTA_Winner_Teamname"						"%s1 Victory"
+
+		"invokerwars_instructions_title"			"Invoker Wars"
+		"invokerwars_instructions_body"				"Welcome to Invoker Wars. The objective of this game mode is to become the most powerful Wizard and rise up against the other Shitty Wizards.<br><br>First team to 50 kills wins!<br><br>PS: Use leap to pick up the runes in mid air!<br><br>Teleport Scrolls are free allowing you to quickly leave the base and enter the middle battlefield."
+
+		"invokerwars_radiant_10kills"				"The Radiant are 10 kills away from Victory!"
+		"invokerwars_dire_10kills"					"The Dire are 10 kills away from Victory!"
+
+		
+		"DOTA_Tooltip_Ability_item_sheepstick"				"Scythe of Vyse (Modified)"
+		"DOTA_Tooltip_Ability_item_rod_of_atos"				"Rod of Atos (Modified)"
+		
+		
+		
+		// Sun Strike
+		"DOTA_Tooltip_ability_invoker_wars_sun_strike"                                  "Sun Strike"
+		"DOTA_Tooltip_ability_invoker_wars_sun_strike_Description"                      "Sends a catastrophic ray of fierce energy from the sun at any targeted location, incinerating all enemies standing beneath it once it reaches the Earth. Damage is spread evenly over all enemies hit."
+		"DOTA_Tooltip_ability_invoker_wars_sun_strike_Lore"                             "Harlek's Incantation of Incineration."
+		"DOTA_Tooltip_ability_invoker_wars_sun_strike_Note0"                            "Gives vision of the target area before the strike."
+		"DOTA_Tooltip_ability_invoker_wars_sun_strike_Note1"                            "You gain experience with kills made from Sun Strike, even if made from outside of the 1200 experience range."
+		"DOTA_Tooltip_ability_invoker_wars_sun_strike_area_of_effect"                   "RADIUS:"
+		"DOTA_Tooltip_ability_invoker_wars_sun_strike_delay"                            "DELAY:"
+		"DOTA_Tooltip_ability_invoker_wars_sun_strike_damage"                           "DAMAGE:"
+
+		// Deafening Blast
+		"DOTA_Tooltip_ability_invoker_wars_cold_snap"                             		"Cold Snap"
+		"DOTA_Tooltip_ability_invoker_wars_cold_snap_Description"                 		"Invoker draws the heat from an enemy, chilling them to their very core. The enemy will take damage and be briefly frozen. Further damage taken in this state will freeze the enemy again."
+		"DOTA_Tooltip_ability_invoker_wars_cold_snap_Lore"                        		"Sadron's Protracted Frisson."
+		"DOTA_Tooltip_ability_invoker_wars_cold_snap_Note0"                       		"The freeze stun only triggers on damage greater than 10 after reductions."
+		"DOTA_Tooltip_ability_invoker_wars_cold_snap_duration"							"COLD SNAP DURATION:\n"
+		"DOTA_Tooltip_ability_invoker_wars_cold_snap_freeze_damage"						"FREEZE DAMAGE:"
+		"DOTA_Tooltip_ability_invoker_wars_cold_snap_freeze_cooldown"					"FREEZE COOLDOWN:"
+		"DOTA_Tooltip_ability_invoker_wars_cold_snap_freeze_duration"					"FREEZE DURATION:"
+
+		// Meat Ball
+		"DOTA_Tooltip_ability_invoker_wars_chaos_meteor"                                "Meat Ball"
+		"DOTA_Tooltip_ability_invoker_wars_chaos_meteor_Description"                    "Invoker pulls a flaming meat ball from space onto the targeted location. Upon landing, the meat ball rolls forward, constantly dealing damage based on the level, and rolling further based on the level. Units hit by the meat ball will also be set on fire for a short time, receiving additional damage based on the level."
+		"DOTA_Tooltip_ability_invoker_wars_chaos_meteor_Lore"                           "Tarak's Descent of Fire."
+		"DOTA_Tooltip_ability_invoker_wars_chaos_meteor_Note0"                          "Deals main damage to enemy units under meteor every 0.5 seconds and burns enemies for smaller damage over 3 seconds."
+		"DOTA_Tooltip_ability_invoker_wars_chaos_meteor_Note1"                          "The meteor moves at a speed of 300."
+		"DOTA_Tooltip_ability_invoker_wars_chaos_meteor_land_time"                      "LAND TIME:"
+		"DOTA_Tooltip_ability_invoker_wars_chaos_meteor_travel_distance"                "TRAVEL DISTANCE:"
+		"DOTA_Tooltip_ability_invoker_wars_chaos_meteor_area_of_effect"                 "RADIUS:"
+		"DOTA_Tooltip_ability_invoker_wars_chaos_meteor_damage_interval"                "DAMAGE TICK:"
+		"DOTA_Tooltip_ability_invoker_wars_chaos_meteor_main_damage"                    "DAMAGE:"
+		"DOTA_Tooltip_ability_invoker_wars_chaos_meteor_burn_duration"                  "BURN TIME:"
+		"DOTA_Tooltip_ability_invoker_wars_chaos_meteor_burn_dps"                       "BURN DPS:"
+
+		// Tornado
+		"DOTA_Tooltip_ability_invoker_wars_tornado"											"Tornado"
+		"DOTA_Tooltip_ability_invoker_wars_tornado_Description"								"Unleashes a fast moving tornado that strikes enemy units in its path. Travels further, faster and deals damage based on the level."
+		"DOTA_Tooltip_ability_invoker_wars_tornado_Lore"										"Claws of Tornarus."
+		"DOTA_Tooltip_ability_invoker_wars_tornado_Note0"									"The Tornado will provide vision for your applies."
+		"DOTA_Tooltip_ability_invoker_wars_tornado_travel_distance"							"TRAVEL DISTANCE:\n"
+		"DOTA_Tooltip_ability_invoker_wars_tornado_travel_speed"								"TRAVEL SPEED:\n"
+		"DOTA_Tooltip_ability_invoker_wars_tornado_area_of_effect"							"RADIUS:"
+		"DOTA_Tooltip_ability_invoker_wars_tornado_base_damage"								"DAMAGE:"
+
+		// Ice Wall
+		"DOTA_Tooltip_ability_invoker_wars_ice_wall"											"Ice Wall"
+		"DOTA_Tooltip_ability_invoker_wars_ice_wall_Description"								"Generates a wall of solid ice directly in front of Invoker for a duration and size based on the abilities level. The bitter cold emanating from it greatly slows nearby enemies and deals damage based on the level of the ability."
+		"DOTA_Tooltip_ability_invoker_wars_ice_wall_Lore"									"Killing Wall of Koryx."
+		"DOTA_Tooltip_ability_invoker_wars_ice_wall_Note0"									"The slow will still affect magic immune enemies if their magic immunity was created after being affected by Ice Wall."
+		"DOTA_Tooltip_ability_invoker_wars_ice_wall_duration"								"WALL DURATION:\n"		
+		"DOTA_Tooltip_ability_invoker_wars_ice_wall_slow"									"%MOVEMENT SLOW:\n"
+		"DOTA_Tooltip_ability_invoker_wars_ice_wall_slow_duration"							"SLOW DURATION:"	
+		"DOTA_Tooltip_ability_invoker_wars_ice_wall_damage_per_second"						"DAMAGE PER SECOND:\n"	
+
+		// Shitty Wizard's Leap
+		"DOTA_Tooltip_ability_invoker_wars_leap"                                        "Shitty Wizard's Leap"
+		"DOTA_Tooltip_ability_invoker_wars_leap_Description"                            "Invoker leaps forward into battle, empowering allied units with a ferocious honk upon landing, granting attack and movement speed. Speed bonus lasts 4 seconds."
+		"DOTA_Tooltip_ability_invoker_wars_leap_Lore"                                   "Both friend and foe alike recognize Invoker's iconic Shitty Wizard in the heat of battle."
+		"DOTA_Tooltip_ability_invoker_wars_leap_Note0"                                  "You can use Leap to dodge incoming projectiles."
+		"DOTA_Tooltip_ability_invoker_wars_leap_leap_distance"                          "DISTANCE:"
+		"DOTA_Tooltip_ability_invoker_wars_leap_leap_speedbonus"                        "%MOVEMENT BONUS:"
+		"DOTA_Tooltip_ability_invoker_wars_leap_leap_speedbonus_as"                     "ATTACK SPEED BONUS:"
+	}
+}

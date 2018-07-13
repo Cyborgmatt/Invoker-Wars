@@ -11,7 +11,7 @@
     flow-children: down;
 	width: 100px;
 	height: 100px;
-
+	margin-left: -30px;
 	background-image: url("file://{images}/custom_game/goal_logo.psd");
 	background-repeat: no-repeat;
 	background-position: 50% 50%;

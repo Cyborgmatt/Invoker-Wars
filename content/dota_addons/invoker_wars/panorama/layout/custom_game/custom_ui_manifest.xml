@@ -14,14 +14,21 @@
 		GameUI.CustomUIConfig().team_logo_large_xml = "file://{resources}/layout/custom_game/overthrow_team_icon_large.xml";
   
 		GameUI.CustomUIConfig().team_colors = {}
-		GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_GOODGUYS] = "#029800;"; // { 2, 152, 0 }	--		Green
-		GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_BADGUYS ] = "#FF2319;"; // { 255, 35, 25 }		--		Red
+		GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_GOODGUYS] = "#3498db;"; // { 52, 152, 219 } --	Cyan 
+		GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_BADGUYS ] = "#EA8205;"; // { 234, 130, 5 }  --	Orange
+		GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_CUSTOM_1] = "#BE49D5;"; // { 190, 73, 213 } --	Purple
 		
 		GameUI.CustomUIConfig().team_icons = {}
 		GameUI.CustomUIConfig().team_icons[DOTATeam_t.DOTA_TEAM_BADGUYS ] = "file://{images}/custom_game/team_icons/team_icon_invoker_01.png";
 		GameUI.CustomUIConfig().team_icons[DOTATeam_t.DOTA_TEAM_GOODGUYS] = "file://{images}/custom_game/team_icons/team_icon_invoker_02.png";
+		GameUI.CustomUIConfig().team_icons[DOTATeam_t.DOTA_TEAM_CUSTOM_1] = "file://{images}/custom_game/team_icons/team_icon_invoker_03.png";
+		
+		GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_TOP_TIMEOFDAY, false );
+		GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_TOP_HEROES, false );
+		GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_FLYOUT_SCOREBOARD, false );
   </script>
   <Panel>
+  <CustomUIElement type="HudTopBar" layoutfile="file://{resources}/layout/custom_game/multiteam_top_scoreboard.xml" />
   <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/overthrow_scoreboard_left.xml" />
   <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/statcollection.xml" />
   <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/barebones_notifications.xml" />
