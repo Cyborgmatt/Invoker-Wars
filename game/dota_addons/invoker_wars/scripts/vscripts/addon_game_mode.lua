@@ -34,7 +34,7 @@ function InvokerWars:InitGameMode()
 	GameRules:SetUseUniversalShopMode( true )
 	GameRules:SetSameHeroSelectionEnabled( true )
 	GameRules:SetHeroSelectionTime( 15.0 )
-	GameRules:SetPreGameTime( 30.0)
+	GameRules:SetPreGameTime( 10.0)
 	GameRules:SetPostGameTime( 30.0 )
 	GameRules:GetGameModeEntity():SetFountainPercentageHealthRegen( 0 )
 	GameRules:GetGameModeEntity():SetFountainPercentageManaRegen( 0 )
@@ -73,13 +73,9 @@ function InvokerWars:InitGameMode()
 	ListenToGameEvent('npc_spawned', Dynamic_Wrap(InvokerWars, 'OnNPCSpawned'), self )
 end
 
--- Pregame welcome message
+-- State Changes
 function InvokerWars:OnGameRulesStateChange()
 	local nNewState = GameRules:State_Get()
-	if nNewState == DOTA_GAMERULES_STATE_PRE_GAME then
-		print( "[Invoker Wars] Gamemode is running." )
-		ShowGenericPopup( "#invokerwars_instructions_title", "#invokerwars_instructions_body", "", "", DOTA_SHOWGENERICPOPUP_TINT_SCREEN )
-	end
 	if nNewState == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS  then
 		print( "[Invoker Wars] Gamemode is Officially Begun." )
 		InvokerWars:OnGameInProgress()
@@ -90,17 +86,17 @@ function InvokerWars:OnGameInProgress()
     local maxPlayerID = PlayerResource:GetTeamPlayerCount()
     for playerID=0,(maxPlayerID-1) do
 		local sID = PlayerResource:GetSteamAccountID(playerID)
-		if sID == 289101818 then
-			 Notifications:TopToAll({text="<b color='red'>Developer</b> <b color='cyan'>Flam3s</b> <b color='white'>is Online!</b>", duration=5.0})
-			print("Notification has been sent for Flam3s")
-		end
-		if sID == 2695440 then
-			 Notifications:TopToAll({text="<b color='red'>Developer</b> <b color='cyan'>Cyborgmatt</b> <b color='white'>is Online!</b>", duration=5.0})
-			 print("Notification has been sent for Cyborgmatt")
+		if sID == 289101818 or sID == 2695440 then
+			local player = PlayerResource:GetPlayer(playerID)
+			local hero = player:GetAssignedHero()
+			local particleName = "particles/econ/events/ti8/ti8_hero_effect.vpcf"
+			local particle = ParticleManager:CreateParticleForPlayer( particleName, PATTACH_ABSORIGIN_FOLLOW, hero, player )
+			ParticleManager:SetParticleControl(particle, 0, hero:GetOrigin())
+			ParticleManager:SetParticleControl(particle, 3, hero:GetOrigin())
+			print("everything has been set")
 		end
     end
 end
-
 
 -- Start players at level 6
 function InvokerWars:OnNPCSpawned( keys )
