@@ -1,60 +1,224 @@
-@define TotalLength: 40s;
+@define TotalLength: 30s;
 @define TimingFunc: linear;
 @define IterationCount: 1;
-@define AnimationDelay: 0s;
 
-.AddonLoadingRoot
+.AddonRoot
 {
+   width: 100%;
+   height: 100%;
+   background-color: #2F363D;
+}
+
+.AddonRoot2
+{
+  height: 803px;
+  width: 610px;
+  margin-top: 120px;
+  margin-left: 20px;
+  padding: 8px;
+  border-radius: 16px;
+  flow-children: down;
+  background-color: gradient( linear, 0% 0%, 0.1% 0%, from( #111111 ), color-stop( 0.01, #202327 ), color-stop( 0.2, #141619ff ), to( #000000dd ) );
+}
+
+
+Label
+{
+    font-size: 18px;
+    color: #999999;
+    vertical-align: top;
+}
+
+#Title
+{
+    flow-children: right;
+}
+
+#TitleIcon
+{
+    width: 64px;
+    height: 64px;
+    vertical-align: center;
+}
+
+#TitleName
+{
+    color: cyan;
+    font-size: 64px;
+    margin-left: -5px;
+    margin-top: 16px;
+    text-transform: uppercase;
+    vertical-align: center;
+}
+
+#TitleLabel
+{
+	font-size: 70px;
+	font-weight: bold;
+	margin-top: 40px;
+	margin-left: 20px;
+	color: white;
+	text-transform: uppercase;
+}
+#ThroneText,
+#CoinsText,
+#ItemsText
+{
+	width: fill-parent-flow(1.0);
+}
+
+.Header
+{
+	font-size: 35px;
+    font-weight: bold;
+	margin-top: 36px;
+	text-transform: uppercase;
+	color: yellow;
+}
+
+
+#ObjectiveHeader
+{
+	margin-top: 5px;
+	margin-left: 10px;
+	color: yellow;
+	font-size: 35px;
+}
+
+#BriefDescription
+{
+	margin-left: 25px;
+	color: white;
+	font-size: 20px;
+}
+
+#HowToPlayHeader
+{
+	margin-left: 10px;
+	color: yellow;
+	font-size: 35px;	
+}
+
+#ThroneRow
+{
+	margin-top: -50px;
+}
+
+#ThroneText
+{
+	vertical-align: center;
+	margin-left: -35px;
+	text-align: right;
+	color: white;
+	font-size: 20px;
+}
+
+#ThroneImage
+{
+	vertical-align: center;
+    width: 200px;
+    height: 200px;
+}
+
+#CoinsRow
+{
+	margin-top: -50px;
+	margin-left: 20px;
+}
+
+#CoinsImage
+{
+    width: 200px;
+    height: 200px;
+	vertical-align: center;
+	margin-left: -40px;
+}
+
+#Abilities
+{
+    width: 180px;
+    height: 180px;
+	vertical-align: center;
+	margin-left: 340px;
+	margin-top: -250px;
+}
+
+#CoinsText
+{
+	vertical-align: center;
+	font-size: 20px;
+	color: white;
+}
+
+#ItemsRow
+{
+}
+
+#ItemsImage
+{
+	width: 200px;
+	margin-left: 10px;
+	margin-top: -75px;
+}
+
+#ItemsText
+{
+    margin-top: 40px;
+	margin-left: 0px;
+	text-align: right;
+	color: white;
+	font-size: 20px;
+}
+
+#ItemsText2
+{
+    margin-top: 60px;
+	margin-left: -247px;
+	text-align: right;
+	color: white;
+	font-size: 20px;
+}
+
+#TipsHeader
+{
+	margin-left: 13px;
+    margin-top:  20px;
+}
+
+#TipsRow
+{
+	flow-children: down;
+	margin-right: 92px;
+	margin-left: 5px;
+}
+
+.TipText
+{
+	margin-left: 16px;
+    margin-top: 0px;
+	color: white;
+	font-size: 20px;
+}
+
+.InfoRow
+{
+    flow-children: right;
     width: 100%;
-    height: 100%;
-    background-color: black;
-    overflow: clip;
 }
 
-#TitlePanel
+
+Label .midas_throne,
+Label .overboss,
+Label .treasure
 {
-  horizontal-align: left;
-  vertical-align: top;
-  margin-top: 100px;
-  margin-left: 30px;
-  flow-children: right;
+    color: #cccccc;
+    font-weight: bold;
 }
 
-#TitlePanel2
+Label .items,
+Label .gold,
+Label .xp
 {
-  horizontal-align: left;
-  vertical-align: top;
-  margin-top: 155px;
-  margin-left: 130px;
-  flow-children: right;
-}
-
-#AddonTitle
-{
-  margin-bottom: -15px;
-  vertical-align: center;
-  text-transform: uppercase;
-  font-size: 65px;
-  font-family: Radiance;
-  color: white;
-  text-shadow: 2px 2px 2px #000000;
-}
-
-#AddonTitle2
-{
-  margin-bottom: -15px;
-  vertical-align: center;
-  text-transform: uppercase;
-  font-size: 65px;
-  font-family: Radiance;
-  color: white;
-  text-shadow: 2px 2px 2px #000000;
-}
-
-.SeqImg
-{
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 1920px;
-  height: 1080px;
+    color: #fcaf3d;
+    font-weight: bold;
 }

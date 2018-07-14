@@ -1,16 +1,29 @@
 <root>
-  <styles>
-    <include src="file://{resources}/styles/custom_game/custom_loading_screen.css" />
-  </styles>
-  <Panel class="AddonLoadingRoot">
-    <Panel id="CustomBg" >
-      <Image class="SeqImg" src="file://{images}/custom_game/loading_screen/invoker_wars.jpg" />
-    </Panel>
-    <Panel id="TitlePanel">
-      <Label id="AddonTitle" text="#addon_game_name" style="" />
-	 </Panel>
-	 <Panel id="TitlePanel2">
-	  <Label id="AddonTitle2" text="Reborn" style="" />
-    </Panel>
-  </Panel>
+	<styles>
+		<include src="file://{resources}/styles/dotastyles.css" />
+		<include src="file://{resources}/styles/custom_game/custom_loading_screen.css" />
+	</styles>
+	<Panel class="AddonRoot">
+		<Panel id="Title">
+			<Label id="TitleLabel" html="true" text="#addon_game_name" />
+		</Panel>
+		<Panel class="AddonRoot2">
+			<Label id="ObjectiveHeader" class="Header" html="true" text="Welcome to Invoker Wars" />
+			<Label id="BriefDescription" text="The objective of this game mode is to become the most powerful wizard and rise up against the other Wizards. First team to reach selected kill amount wins!" />
+			<Label id="HowToPlayHeader" class="Header" html="true" text="Tips:" />
+			<Panel id="ThroneRow" class="InfoRow">
+				<Label id="ThroneText" html="true" text="Annoy Other People by Spamming Your Abilities" />
+				<Image id="ThroneImage" src="file://{images}/custom_game/loading_screen/invoker.png" />
+			</Panel>
+			<Panel id="CoinsRow" class="InfoRow">
+				<Image id="CoinsImage" src="file://{images}/custom_game/loading_screen/rune.png" />
+				<Label id="CoinsText" html="true" text="Use Leap to Pick the Runes From Mid Air!" />
+			</Panel>
+			<Label id="TipsHeader" class="Header" html="true" text="Ability List:" />
+			<Panel id="TipsRow" class="InfoRow">
+				<Label id="Tips" class="TipText" html="true" text="#game_info_tips"/>
+			</Panel>
+			<Image id="Abilities" src="file://{images}/custom_game/loading_screen/invoke.png" />
+		</Panel>
+	</Panel>
 </root>

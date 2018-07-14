@@ -23,30 +23,16 @@
 #VotesList
 {
     width: 250px;
-    height: 30%;
+    height: 280px;
     flow-children: down;    
     padding-left: 16px;
     margin-left: 16px;
+	margin-right: 250px;
+	margin-top: 485px;
     padding-right: 16px;
     vertical-align: middle;
-    background-color: gradient( linear, 100% 100%, 100% 100%, from( #111111 ), color-stop( 0.01, #202327 ), color-stop( 0.2, #141619ff ), to( #000000dd ) );
-    box-shadow: black -4px -4px 8px 8px;
-   
-    animation-name: TeamsListAppear;
-    animation-duration: 0.75s;
-}
-
-@keyframes 'VoteListAppear'
-{
-    0%
-    {
-        transform: translatex( 100% );
-    }
-
-    100%
-    {
-        transform: translatex( 0px );
-    }
+    background-color: gradient( linear, 0% 0%, 0.1% 0%, from( #111111 ), color-stop( 0.01, #202327 ), color-stop( 0.2, #141619ff ), to( #000000dd ) );
+	border-radius: 16px;
 }
 
 #VoteListLabel
@@ -74,11 +60,12 @@
 #VoteGroupKillsTitle
 {
     text-transform: uppercase;
+	font-family: Verdana;
     font-size: 22px;
-    letter-spacing: 1px;
-    color: #dfe8e9;
-    //margin-top: 16px;
-    margin-left: 8px;
+    letter-spacing: 0px;
+    color: yellow;
+    margin-top: -5px;
+    margin-left:-1px;
 }
 
 #KillsButton1, #KillsButton2, #KillsButton3

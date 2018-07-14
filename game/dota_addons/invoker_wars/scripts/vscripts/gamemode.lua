@@ -113,14 +113,14 @@ function GameMode:OnGameInProgress()
  local maxPlayerID = PlayerResource:GetTeamPlayerCount()
     for playerID=0,(maxPlayerID-1) do
 		local sID = PlayerResource:GetSteamAccountID(playerID)
-		if sID == 289101818 or sID == 5390881 then
+		if sID == 289101818 or sID == 5390881 or sID == 105514898 then
 			local player = PlayerResource:GetPlayer(playerID)
 			local hero = player:GetAssignedHero()
 			local particleName = "particles/econ/events/ti8/ti8_hero_effect.vpcf"
 			local particle = ParticleManager:CreateParticle( particleName, PATTACH_ABSORIGIN_FOLLOW, hero)
 			ParticleManager:SetParticleControl(particle, 0, hero:GetOrigin())
 			ParticleManager:SetParticleControl(particle, 3, hero:GetOrigin())
-			print("[InvokerWars] Particles updated")
+			print("[InvokerWars] Particles updated for Flam3s and Cyborgmatt")
 		end
     end
 end
