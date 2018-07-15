@@ -23,12 +23,12 @@
 #VotesList
 {
     width: 250px;
-    height: 280px;
+    height: 320px;
     flow-children: down;    
     padding-left: 16px;
     margin-left: 16px;
 	margin-right: 250px;
-	margin-top: 485px;
+	margin-top: 445px;
     padding-right: 16px;
     vertical-align: middle;
     background-color: gradient( linear, 0% 0%, 0.1% 0%, from( #111111 ), color-stop( 0.01, #202327 ), color-stop( 0.2, #141619ff ), to( #000000dd ) );
@@ -60,7 +60,6 @@
 #VoteGroupKillsTitle
 {
     text-transform: uppercase;
-	font-family: Verdana;
     font-size: 22px;
     letter-spacing: 0px;
     color: yellow;
