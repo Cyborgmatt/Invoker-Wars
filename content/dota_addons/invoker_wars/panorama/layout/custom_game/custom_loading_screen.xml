@@ -25,5 +25,8 @@
 			</Panel>
 			<Image id="Abilities" src="file://{images}/custom_game/loading_screen/invoke.png" />
 		</Panel>
+		<Panel id="Discord">
+            <Image id="DiscordImage" src="file://{images}/custom_game/loading_screen/Discord.png" onactivate="ExternalBrowserGoToURL('https://discord.gg/TJXdrSY');"/>
+        </Panel>
 	</Panel>
 </root>

@@ -21,6 +21,34 @@
   background-color: gradient( linear, 0% 0%, 0.1% 0%, from( #111111 ), color-stop( 0.01, #202327 ), color-stop( 0.2, #141619ff ), to( #000000dd ) );
 }
 
+#Discord {
+    /* width: 100%; */
+    horizontal-align: center;
+    width: 300px;
+    height: 130px;
+    flow-children: down;
+	margin-top: 870px;
+	margin-left: 1526px;
+}
+
+#DiscordImage:hover {
+    width: 273px;
+    height: 84px;
+    box-shadow: #000000ff 0px 0px 16px 0px;
+}
+
+#DiscordImage {
+    box-shadow: #00000044 0px 0px 8px 0px;
+    border-radius: 8px;
+    width: 260px;
+    height: 80px;
+    horizontal-align: center;
+    vertical-align: middle;
+    transition-property: height, width, box-shadow;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.1s;
+}
+
 
 Label
 {
